@@ -1,0 +1,5 @@
+*.log
+temp/
+env_med
+env_med/
+db.sqlite3
