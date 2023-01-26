@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="card-group">
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sintomas</th>
+                    <th>Edad</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Domicilio</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paciente in pacientes %}
+                <tr>
+                    <td>{{paciente.id_persona.nombre}}</td>
+                    <td>{{paciente.id_persona.apellido}}</td>
+                    <td>{{paciente.sintomas}}</td>
+                    <td>{{paciente.id_persona.edad}}</td>
+                    <td>{{paciente.id_persona.telefono}}</td>
+                    <td>{{paciente.id_persona.email}}</td>
+                    <td>{{paciente.id_persona.domicilio}}</td>
+                    <td><a href="editar_paciente/{{paciente.id_paciente}}">Editar</a><b>/</b><a href="eliminar_paciente/{{paciente.id_paciente}}">Borrar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock body %}
