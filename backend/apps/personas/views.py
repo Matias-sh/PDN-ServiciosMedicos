@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import *
 # Create your views here.
-
+'''
 def vista_personas(request):
     personas = Personas.objects.all()
     context = {
@@ -44,3 +43,4 @@ def vista_eliminar_persona(request, id):
     persona = Personas.objects.get(id_persona=id)
     persona.delete()
     return redirect('vista_personas')
+'''
